@@ -9,7 +9,7 @@ Upload your new images with the following names:
 - `about.jpg`
 - `gallery1.jpg` through `gallery6.jpg`
 - `og.jpg`
-- `favicon.svg`
+- `favicon.svg` (add `.ico` or `.png` yourself if needed)
 - `facebook.svg`, `instagram.svg`, `yelp.svg`
 
 Replace the placeholder images with your own assets after deployment.
