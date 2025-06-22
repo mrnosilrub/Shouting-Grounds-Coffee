@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Disk -->
+  <circle cx="32" cy="32" r="30" fill="#212E3D"></circle>
+  <!-- Cup -->
+  <rect x="18" y="28" width="24" height="18" rx="3" fill="#F0EDE8"></rect>
+  <path d="M42 30a6 6 0 0 1 0 12" fill="none" stroke="#F0EDE8" stroke-width="3" stroke-linecap="round"></path>
+  <!-- Steam -->
+  <path d="M26 24c0-4 5-4 5-8M34 24c0-4 5-4 5-8" fill="none" stroke="#F0EDE8" stroke-width="3" stroke-linecap="round"></path>
+</svg>
