@@ -260,6 +260,14 @@
       navMenu.classList.toggle('hidden');
       navToggle.innerHTML = navMenu.classList.contains('hidden') ? '&#9776;' : '&times;';
     });
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (!navMenu.classList.contains('hidden')) {
+          navMenu.classList.add('hidden');
+          navToggle.innerHTML = '&#9776;';
+        }
+      });
+    });
   </script>
 </body>
 </html>
