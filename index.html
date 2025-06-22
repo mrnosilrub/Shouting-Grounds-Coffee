@@ -1,0 +1,183 @@
+<!--  Shouting Grounds Coffee Co.  •  index.html  -->
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shouting Grounds Coffee Co. | New Caney, TX</title>
+
+  <!-- SEO / Social -->
+  <meta name="description" content="Hand-crafted coffee, scratch-made pastries & warm fellowship in New Caney, TX."/>
+  <meta name="keywords" content="coffee, espresso, pastries, New Caney coffee shop"/>
+  <meta property="og:title" content="Shouting Grounds Coffee Co."/>
+  <meta property="og:description" content="Where every cup speaks volumes."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://shoutinggrounds.com"/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1600&q=80"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" rel="stylesheet"/>
+
+  <!-- AOS (scroll animations) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <style>
+    html{font-family:Inter,sans-serif}
+    h1,h2,h3{font-family:"Playfair Display",serif}
+    /* Hero overlay */
+    .hero-bg::before{
+      content:"";position:absolute;inset:0;backdrop-filter:brightness(.6);
+      background:linear-gradient(to bottom,rgba(0,0,0,.4),rgba(0,0,0,.7));
+    }
+  </style>
+</head>
+
+<body class="text-gray-800 bg-white">
+
+<!-- ── NAV ─────────────────────────────────────────────── -->
+<nav class="fixed top-0 w-full z-20 bg-white/70 backdrop-blur-md shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+    <a href="#home" class="text-xl font-semibold tracking-wide">Shouting Grounds</a>
+    <div class="hidden md:flex space-x-8 text-sm">
+      <a href="#about"  class="hover:text-amber-600">About</a>
+      <a href="#menu"   class="hover:text-amber-600">Menu</a>
+      <a href="#gallery"class="hover:text-amber-600">Gallery</a>
+      <a href="#visit"  class="hover:text-amber-600">Visit</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ────────────────────────────────────────────── -->
+<header id="home" class="relative hero-bg h-screen bg-center bg-cover"
+        style="background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80');">
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Shouting Grounds Coffee Co.</h1>
+    <p class="max-w-2xl text-lg md:text-xl mb-8">Premium coffee · Scratch-made pastries · Community &amp; fellowship</p>
+    <a href="#visit" class="inline-block bg-amber-600 hover:bg-amber-700 text-white py-3 px-8 rounded-full shadow-lg transition">
+      Plan Your Visit
+    </a>
+  </div>
+</header>
+
+<!-- ── ABOUT ───────────────────────────────────────────── -->
+<section id="about" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+      <h2 class="text-4xl font-bold mb-4">Rooted in Community</h2>
+      <p class="mb-4">Owned and operated by New Caney locals <strong>Katie &amp; Douglas Carroll</strong>, Shouting Grounds opened its doors in 2025 with a simple mission: <em>share Christ’s love one cup at a time</em>. From signature espresso drinks to smoothies and scratch-baked pastries, every item is crafted with purpose and served with a smile. :contentReference[oaicite:1]{index=1}</p>
+      <p>Our cozy space is designed for connection—grab a seat, strike up a conversation, or sink into a good book while the aroma of freshly ground beans fills the air.</p>
+    </div>
+    <img data-aos="fade-left" src="https://images.unsplash.com/photo-1459755486867-b55449bb39ff?auto=format&fit=crop&w=800&q=80"
+         alt="Barista pouring latte art" class="rounded-lg shadow-lg">
+  </div>
+</section>
+
+<!-- ── MENU HIGHLIGHTS ─────────────────────────────────── -->
+<section id="menu" class="py-20">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-12">Sip &amp; Savor</h2>
+
+    <div class="grid gap-10 md:grid-cols-3">
+      <!-- Espresso -->
+      <div data-aos="zoom-in" class="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M3 9h18M8 4h8m-7 5v11m6-11v11M5 20h14M4 13h4m8 0h4"/>
+        </svg>
+        <h3 class="font-semibold mb-2">Espresso Classics</h3>
+        <p class="text-sm">From velvety cappuccinos to bold americanos, pulled on our La Marzocco.</p>
+      </div>
+
+      <!-- Signature Drinks -->
+      <div data-aos="zoom-in" class="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M5 11h14M5 15h14M8 7h8m-5 12v-2m2 2v-2m-4 2v-2"/>
+        </svg>
+        <h3 class="font-semibold mb-2">Seasonal Signatures</h3>
+        <p class="text-sm">Marble Mocha, Honey Lavender Latte, Dragonfruit Lychee Refresher & more fan favorites.</p>
+      </div>
+
+      <!-- Pastries -->
+      <div data-aos="zoom-in" class="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M12 8c-3.314 0-6 1.343-6 3s2.686 3 6 3 6-1.343 6-3-2.686-3-6-3Zm0 6v3m-4 0h8"/>
+        </svg>
+        <h3 class="font-semibold mb-2">Scratch-Made Pastries</h3>
+        <p class="text-sm">Bacon-cheddar scones, cinnamon rolls, muffins &amp; more—baked fresh every morning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALLERY ─────────────────────────────────────────── -->
+<section id="gallery" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-12">Behind the Beans</h2>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <img data-aos="fade-up" src="https://images.unsplash.com/photo-1532635223-59673d3ac2e0?auto=format&fit=crop&w=600&q=80" alt="Fresh latte art" class="rounded-lg shadow-md">
+      <img data-aos="fade-up" src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&w=600&q=80" alt="Pastry display" class="rounded-lg shadow-md">
+      <img data-aos="fade-up" src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=600&q=80" alt="Pour-over coffee" class="rounded-lg shadow-md">
+      <img data-aos="fade-up" src="https://images.unsplash.com/photo-1523906834658-6e27591e05b4?auto=format&fit=crop&w=600&q=80" alt="Smoothie bowl" class="rounded-lg shadow-md">
+      <img data-aos="fade-up" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Espresso machine" class="rounded-lg shadow-md">
+      <img data-aos="fade-up" src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=600&q=80" alt="Cafe interior" class="rounded-lg shadow-md">
+    </div>
+  </div>
+</section>
+
+<!-- ── VISIT ───────────────────────────────────────────── -->
+<section id="visit" class="py-20">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+    <!-- Info -->
+    <div>
+      <h2 class="text-4xl font-bold mb-6">Plan Your Visit</h2>
+      <p class="mb-4"><strong>Address:</strong> 22735 Antique Ln, New Caney, TX 77357 :contentReference[oaicite:2]{index=2}</p>
+      <p class="mb-4"><strong>Phone:</strong> <a href="tel:+18325435044" class="text-amber-600 hover:underline">(832) 543-5044</a></p>
+      <h3 class="font-semibold mt-6 mb-2">Hours</h3>
+      <ul class="text-sm leading-6">
+        <li>Mon – Fri &nbsp; 6:30 am – 4 pm</li>
+        <li>Sat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:30 am – 5 pm</li>
+        <li>Sun &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Closed</li>
+      </ul>
+      <a href="https://maps.app.goo.gl/Urs7KhQNfEtvX23h6" target="_blank"
+         class="inline-block mt-8 bg-amber-600 hover:bg-amber-700 text-white py-3 px-6 rounded-full shadow transition">
+         Get Directions
+      </a>
+    </div>
+
+    <!-- Map -->
+    <iframe class="w-full h-80 rounded-lg shadow-lg"
+      src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_EMBED_API_KEY&q=22735+Antique+Ln,+New+Caney,+TX+77357"
+      allowfullscreen loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────────── -->
+<footer class="bg-gray-900 text-gray-300 py-10">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+    <p>&copy; <span id="year"></span> Shouting Grounds Coffee Co. All rights reserved.</p>
+    <div class="flex space-x-6 text-xl">
+      <a aria-label="Facebook" href="https://www.facebook.com/p/Shouting-Grounds-Coffee-Company-61566595817025/" class="hover:text-white">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12..."/></svg>
+      </a>
+      <a aria-label="Instagram" href="https://www.instagram.com/shoutinggroundscoffeeco/" class="hover:text-white">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M7 2C4.8..."/></svg>
+      </a>
+      <a aria-label="Yelp" href="https://www.yelp.com/biz/shouting-grounds-coffee-new-caney" class="hover:text-white">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M11.6 2..."/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();                     // animate on scroll
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
