@@ -22,6 +22,8 @@
 
   <!-- AOS (Animate On Scroll) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Swiper Carousel -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <style>
     html { font-family: Inter, sans-serif; }
     h1, h2, h3 { font-family: 'Playfair Display', serif; }
@@ -160,9 +162,16 @@
   <section id="testimonials" class="py-20">
     <div class="max-w-5xl mx-auto px-8 text-center">
       <h2 class="text-4xl font-bold mb-12">Testimonials</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <p class="italic">&ldquo;SO CUTE! Christian atmosphere, friendly service, cinnamon rolls to die for!&rdquo; &mdash; Ivy M., Yelp review</p>
-        <p class="italic">&ldquo;Quality family-owned coffee shop&hellip; my honey lavender oat-milk latte was perfection.&rdquo; &mdash; Kathy M., Yelp review</p>
+      <div class="swiper testimonials-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide p-4"><p class="italic">&ldquo;SO CUTE! Christian atmosphere, friendly service, cinnamon rolls to die for!&rdquo; &mdash; Ivy M., Yelp review</p></div>
+          <div class="swiper-slide p-4"><p class="italic">&ldquo;Quality family-owned coffee shop&hellip; my honey lavender oat-milk latte was perfection.&rdquo; &mdash; Kathy M., Yelp review</p></div>
+          <div class="swiper-slide p-4"><p class="italic">&ldquo;Love the vibe of this place. Turning a home into a business allows for a base-level coziness that you don’t get anywhere else. Coffee is spectacular! NOT OVER SWEET!!! Thank you thank you for not…&rdquo; &mdash; Kyle Y., Yelp review</p></div>
+          <div class="swiper-slide p-4"><p class="italic">&ldquo;The staff was very friendly for our first time! I had been hearing about this coffee shop for a bit and finally was off early enough to swing by, it was worth the wait! We tried their dragonfruit…&rdquo; &mdash; Jackeline R., Yelp review</p></div>
+          <div class="swiper-slide p-4"><p class="italic">&ldquo;Wonderful coffee shop! We are so excited to have a local shop that has great coffee and has a warm welcoming space to hang out! The coffee was delicious as were the baked goods!&rdquo; &mdash; Erin M., Yelp review</p></div>
+          <div class="swiper-slide p-4"><p class="italic">&ldquo;So happy to have a quality family-owned coffee shop now in our area. My first visit could not have been better. Will be back. Highly recommend. I got a honey lavender oat-milk hot latte….&rdquo; &mdash; Kathy M., Yelp review</p></div>
+        </div>
+        <div class="swiper-pagination mt-6"></div>
       </div>
     </div>
   </section>
@@ -208,9 +217,20 @@
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     AOS.init();
     document.getElementById('year').textContent = new Date().getFullYear();
+    new Swiper('.testimonials-swiper', {
+      loop: true,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
   </script>
 </body>
 </html>
