@@ -35,6 +35,7 @@
       --brand-light-alt: #E8E6DF;
       --brand-accent: #967038;
       --brand-dark: #212E3D;
+      --nav-height: 6rem;
     }
     /* Hero overlay */
     .hero-bg::before {
@@ -43,6 +44,14 @@
       inset: 0;
       backdrop-filter: brightness(0.6);
       background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+    }
+    #home {
+      min-height: calc(100vh - var(--nav-height));
+      display: flex;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      #home { min-height: calc(75vh - var(--nav-height)); }
     }
   </style>
 </head>
@@ -65,8 +74,8 @@
   </nav>
 
   <!-- HERO SECTION -->
-  <header id="home" class="relative hero-bg h-screen md:h-[75vh] bg-center bg-cover" style="background-image: url('assets/hero-bg.jpg');">
-    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
+  <header id="home" class="relative hero-bg bg-center bg-cover" style="background-image: url('assets/hero-bg.jpg');">
+    <div class="relative z-10 flex flex-col items-center text-center text-white px-6 w-full">
       <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Coffee that speaks volumes.</h1>
       <p class="max-w-2xl text-lg md:text-xl mb-8">hand-crafted espresso • scratch-made pastries • fellowship in New Caney</p>
       <a href="#visit" class="inline-block bg-[var(--brand-accent)] hover:bg-[var(--brand-accent)]/90 text-white py-3 px-8 rounded-full shadow-lg transition">Plan Your Visit</a>
