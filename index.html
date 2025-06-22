@@ -47,15 +47,16 @@
 
   <!-- NAVIGATION -->
   <nav class="fixed top-0 w-full z-20 bg-[var(--brand-light)] text-[var(--brand-dark)] shadow-sm py-3">
-    <div class="max-w-6xl mx-auto px-8 flex items-center justify-between ">
+    <div class="relative max-w-6xl mx-auto px-8 flex items-center justify-between ">
       <a href="#home">
         <img src="assets/logo.png" alt="Shouting Grounds Coffee Co. logo" class="h-16">
       </a>
-      <div class="hidden md:flex space-x-8 text-sm">
-        <a href="#about" class="hover:text-[var(--brand-accent)]">About</a>
-        <a href="#menu" class="hover:text-[var(--brand-accent)]">Menu</a>
-        <a href="#gallery" class="hover:text-[var(--brand-accent)]">Gallery</a>
-        <a href="#visit" class="hover:text-[var(--brand-accent)]">Visit</a>
+      <button id="nav-toggle" class="md:hidden text-3xl" aria-label="Toggle navigation">&#9776;</button>
+      <div id="nav-menu" class="hidden md:flex space-y-4 md:space-y-0 md:space-x-8 text-sm absolute md:static right-8 top-full bg-[var(--brand-light)] md:bg-transparent p-4 md:p-0 shadow-md md:shadow-none">
+        <a href="#about" class="block md:inline hover:text-[var(--brand-accent)]">About</a>
+        <a href="#menu" class="block md:inline hover:text-[var(--brand-accent)]">Menu</a>
+        <a href="#gallery" class="block md:inline hover:text-[var(--brand-accent)]">Gallery</a>
+        <a href="#visit" class="block md:inline hover:text-[var(--brand-accent)]">Visit</a>
       </div>
     </div>
   </nav>
@@ -243,6 +244,12 @@
         768: { slidesPerView: 2 },
         1024: { slidesPerView: 3 }
       }
+    });
+
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
     });
   </script>
 </body>
