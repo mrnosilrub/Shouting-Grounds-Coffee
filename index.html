@@ -220,17 +220,25 @@
   <script>
     AOS.init();
     document.getElementById('year').textContent = new Date().getFullYear();
-    new Swiper('.testimonials-swiper', {
-      loop: true,
-      autoplay: { delay: 5000, disableOnInteraction: false },
-      allowTouchMove: false,
-      autoHeight: true,
-      slidesPerView: 1,
-      spaceBetween: 20,
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-      }
+    window.addEventListener('load', () => {
+      const swiperEl = document.querySelector('.testimonials-swiper');
+      let maxHeight = 0;
+      swiperEl.querySelectorAll('.swiper-slide').forEach(slide => {
+        maxHeight = Math.max(maxHeight, slide.offsetHeight);
+      });
+      swiperEl.style.height = maxHeight + 'px';
+
+      new Swiper('.testimonials-swiper', {
+        loop: true,
+        autoplay: { delay: 5000, disableOnInteraction: false },
+        allowTouchMove: false,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        breakpoints: {
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        }
+      });
     });
   </script>
 </body>
