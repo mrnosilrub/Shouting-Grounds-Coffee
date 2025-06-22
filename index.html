@@ -55,7 +55,7 @@
         <img src="assets/logo.png" alt="Shouting Grounds Coffee Co. logo" class="h-16">
       </a>
       <button id="nav-toggle" class="md:hidden text-3xl" aria-label="Toggle navigation">&#9776;</button>
-      <div id="nav-menu" class="hidden md:flex space-y-4 md:space-y-0 md:space-x-8 text-sm absolute md:static right-8 top-full bg-[var(--brand-light)] md:bg-transparent p-4 md:p-0 shadow-md md:shadow-none">
+      <div id="nav-menu" class="hidden fixed inset-0 flex flex-col items-center justify-center space-y-8 text-lg bg-[var(--brand-light)] md:static md:flex md:flex-row md:space-y-0 md:space-x-8 md:bg-transparent md:p-0 md:shadow-none">
         <a href="#about" class="block md:inline hover:text-[var(--brand-accent)]">About</a>
         <a href="#menu" class="block md:inline hover:text-[var(--brand-accent)]">Menu</a>
         <a href="#gallery" class="block md:inline hover:text-[var(--brand-accent)]">Gallery</a>
@@ -246,6 +246,7 @@
     const navMenu = document.getElementById('nav-menu');
     navToggle.addEventListener('click', () => {
       navMenu.classList.toggle('hidden');
+      navToggle.innerHTML = navMenu.classList.contains('hidden') ? '&#9776;' : '&times;';
     });
   </script>
 </body>
