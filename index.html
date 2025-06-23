@@ -29,9 +29,13 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <style>
   body { margin: 0; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
     html {
       font-family: Inter, sans-serif;
       scroll-padding-top: 6rem;
+      overflow-x: hidden;
     }
     h1, h2, h3 { font-family: 'Playfair Display', serif; }
     :root {
