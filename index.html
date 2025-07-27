@@ -176,16 +176,43 @@
   <section id="gallery" class="py-20 bg-[var(--brand-light)]">
     <div class="max-w-5xl mx-auto px-8">
       <h2 class="text-4xl font-bold text-center mb-12">Behind the Beans</h2>
-      <div class="grid grid-cols-2 gap-6 lg:grid-cols-3">
-        <img data-aos="fade-up" src="assets/gallery1.jpg" alt="Fresh latte art" class="rounded-lg shadow-md w-full h-48 object-cover">
-        <img data-aos="fade-up" src="assets/gallery2.jpg" alt="Pastry display" class="rounded-lg shadow-md w-full h-48 object-cover">
-        <img data-aos="fade-up" src="assets/gallery3.jpg" alt="Pour-over coffee" class="rounded-lg shadow-md w-full h-48 object-cover">
-        <img data-aos="fade-up" src="assets/gallery4.jpg" alt="Smoothie bowl" class="rounded-lg shadow-md w-full h-48 object-cover">
-        <img data-aos="fade-up" src="assets/gallery5.jpg" alt="Espresso machine" class="rounded-lg shadow-md w-full h-48 object-cover">
-        <img data-aos="fade-up" src="assets/gallery6.jpg" alt="Cafe interior" class="rounded-lg shadow-md w-full h-48 object-cover">
+      <div class="swiper beans-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img data-aos="fade-up" src="assets/gallery1.jpg" alt="Fresh latte art" class="w-full h-48 object-cover">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img data-aos="fade-up" src="assets/gallery2.jpg" alt="Pastry display" class="w-full h-48 object-cover">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img data-aos="fade-up" src="assets/gallery3.jpg" alt="Pour-over coffee" class="w-full h-48 object-cover">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img data-aos="fade-up" src="assets/gallery4.jpg" alt="Smoothie bowl" class="w-full h-48 object-cover">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img data-aos="fade-up" src="assets/gallery5.jpg" alt="Espresso machine" class="w-full h-48 object-cover">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img data-aos="fade-up" src="assets/gallery6.jpg" alt="Cafe interior" class="w-full h-48 object-cover">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
-    </div>
-  </section>
+      </div>
+    </section>
   <!-- TESTIMONIALS SECTION -->
   <section id="testimonials" class="py-20 bg-[var(--brand-light-alt)]">
     <div class="max-w-5xl mx-auto px-8 text-center">
@@ -272,6 +299,18 @@
         768: { slidesPerView: 2 },
         1024: { slidesPerView: 3 }
       }
+    });
+
+    new Swiper('.beans-swiper', {
+      loop: true,
+      autoplay: { delay: 3000, disableOnInteraction: false },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      },
+      pagination: { el: '.beans-swiper .swiper-pagination', clickable: true }
     });
 
     const navToggle = document.getElementById('nav-toggle');
