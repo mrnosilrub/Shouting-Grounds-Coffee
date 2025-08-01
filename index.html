@@ -306,7 +306,7 @@
   <section id="testimonials" class="py-20 bg-[var(--brand-light-alt)]">
     <div class="max-w-5xl mx-auto px-8 text-center">
       <h2 class="text-4xl font-bold mb-12">Testimonials</h2>
-      <div class="swiper testimonials-swiper h-56">
+      <div class="swiper testimonials-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide p-4"><p class="italic">&ldquo;SO CUTE! Christian atmosphere, friendly service, cinnamon rolls to die for!&rdquo;<br><br>&mdash; Ivy M., Yelp review</p></div>
           <div class="swiper-slide p-4"><p class="italic">&ldquo;Lots of great nooks with beautiful music themed décor! My London fog was excellent and my husband’s coffee was tasty too. The atmosphere was so peaceful and family friendly. By far the nicest coffee spot off of 59!&rdquo;<br><br>&mdash; Carolina V., Google review</p></div>
@@ -394,12 +394,18 @@
   <script>
     AOS.init();
     document.getElementById('year').textContent = new Date().getFullYear();
+    const testimonialsWrapper = document.querySelector('.testimonials-swiper .swiper-wrapper');
+    Array.from(testimonialsWrapper.children)
+      .sort(() => Math.random() - 0.5)
+      .forEach(slide => testimonialsWrapper.appendChild(slide));
+
     new Swiper('.testimonials-swiper', {
       loop: true,
       autoplay: { delay: 5000, disableOnInteraction: false },
       allowTouchMove: false,
       slidesPerView: 1,
       spaceBetween: 20,
+      autoHeight: true,
       breakpoints: {
         768: { slidesPerView: 2 },
         1024: { slidesPerView: 3 }
