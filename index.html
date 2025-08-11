@@ -27,8 +27,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Swiper Carousel -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <!-- Google reCAPTCHA -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  
   <style>
   body { margin: 0; }
     *, *::before, *::after {
@@ -357,11 +356,14 @@
   <section id="contact" class="py-20 bg-[var(--brand-light-alt)]">
     <div class="max-w-5xl mx-auto px-8">
       <h2 class="text-4xl font-bold text-center mb-8">Get in Touch</h2>
-      <form id="contact-form" class="grid gap-6 max-w-xl mx-auto">
+      <form id="contact-form" action="https://formsubmit.co/hello@shoutinggrounds.com" method="POST" class="grid gap-6 max-w-xl mx-auto">
+        <input type="hidden" name="_subject" value="New website inquiry - Shouting Grounds Coffee">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://shoutinggrounds.com/?sent=1#contact">
+        <input type="hidden" name="_captcha" value="false">
         <input type="text" name="name" placeholder="Name" required class="w-full p-3 rounded border border-gray-300" />
         <input type="email" name="email" placeholder="Email" required class="w-full p-3 rounded border border-gray-300" />
         <textarea name="message" rows="4" placeholder="Message" required class="w-full p-3 rounded border border-gray-300"></textarea>
-        <div class="g-recaptcha justify-self-center" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
         <button type="submit" class="bg-[var(--brand-accent)] hover:bg-[var(--brand-accent)]/90 text-white py-3 px-6 rounded-full shadow">Send Message</button>
         <p class="text-center text-sm mt-2"><a href="/privacy" class="underline hover:text-[var(--brand-accent)]">Privacy Policy</a></p>
       </form>
@@ -442,15 +444,7 @@
       });
     });
 
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.addEventListener('submit', (e) => {
-        if (typeof grecaptcha !== 'undefined' && grecaptcha.getResponse() === '') {
-          e.preventDefault();
-          alert('Please complete the captcha.');
-        }
-      });
-    }
+    
   </script>
 </body>
 </html>
