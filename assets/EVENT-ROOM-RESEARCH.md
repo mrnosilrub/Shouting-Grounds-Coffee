@@ -41,7 +41,7 @@
 
 - URL: /private-events or /events
 - Nav: add “Events” between `Gallery` and `Visit`
-- Sections:
+- Sections: 
   1) Hero: photo of the room; subhead with value proposition
   2) Quick facts: capacity (seated/standing), room size, hours available, parking
   3) Amenities: Wi‑Fi, TV/HDMI/projector, speakers, mic, tables/chairs, decor rules
